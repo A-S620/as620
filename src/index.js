@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {createTheme, ThemeProvider} from "@mui/material";
 import App from "./app/App";
+
 const theme = createTheme({
     spacing: 8,
+    typography: {
+        fontSize: 12,
+    },
     palette: {
         text: {
             primary: '#073b4c',
@@ -23,10 +27,10 @@ const theme = createTheme({
     },
 });
 ReactDOM.render(
-  <React.StrictMode>
-      <ThemeProvider theme={theme}>
-          <App />
-     </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ThemeProvider theme={theme}>
+            <App/>
+        </ThemeProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );

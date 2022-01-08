@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css';
-import KeySkills from "../features/KeySkills";
+import Navigation from "../navigation/Navigation";
 
 function App() {
   return (
     <div className="App">
-      <KeySkills/>
+      <Navigation/>
     </div>
   );
 }

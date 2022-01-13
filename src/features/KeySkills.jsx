@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Box, Paper, Grid} from '@mui/material';
 import {Bubble, BubbleChart, BubbleSeries, ChartTooltip} from 'reaviz';
 import KeySkillsData from "../data/KeySkillsData.js";
-import SkillSelect from "./SkillSelect";
+import KeySkillsSelect from "./KeySkillsSelect";
 import {createStyles, makeStyles} from "@mui/styles";
 
 const useStyles = makeStyles((theme) =>
@@ -25,7 +25,7 @@ export default function KeySkills() {
         <Box className={classes.root} >
             <Grid container>
                     <Grid item>
-                        <SkillSelect onSkillSelect={setSkill}/>
+                        <KeySkillsSelect onSkillSelect={setSkill}/>
                     </Grid>
 
                     <Grid item>

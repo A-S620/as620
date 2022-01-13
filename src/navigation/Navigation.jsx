@@ -36,8 +36,8 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
     return {
-        id: `full-width-tab-${index}`,
-        'aria-controls': `full-width-tabpanel-${index}`,
+        id: `tab-${index}`,
+        'aria-controls': `tabpanel-${index}`,
     };
 }
 
@@ -50,7 +50,7 @@ export default function Navigation() {
     };
 
     return (
-        <Box sx={{ bgcolor: 'background.paper'}}>
+        <Box >
             <AppBar position="static">
                 <Tabs
                     value={value}
@@ -58,21 +58,25 @@ export default function Navigation() {
                     indicatorColor="secondary"
                     textColor="inherit"
                     variant="fullWidth"
-                    aria-label="full width tabs example"
+                    aria-label="navigation tabs"
                 >
-                    <Tab label="Key Skills" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Item Three" {...a11yProps(2)} />
+                    <Tab label="About Me" {...a11yProps(0)} />
+                    <Tab label="Key Skills" {...a11yProps(1)} />
+                    <Tab label="Item Two" {...a11yProps(2)} />
+                    <Tab label="Item Three" {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
 
                 <TabPanel value={value} index={0} >
+                    Meep
+                </TabPanel>
+            <TabPanel value={value} index={1} >
                     <KeySkills/>
                 </TabPanel>
-                <TabPanel value={value} index={1} >
+                <TabPanel value={value} index={2} >
                     Item Two
                 </TabPanel>
-                <TabPanel value={value} index={2}>
+                <TabPanel value={value} index={3}>
                     Item Three
                 </TabPanel>
         </Box>

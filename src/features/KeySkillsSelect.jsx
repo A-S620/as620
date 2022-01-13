@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import KeySkillsData from "../data/KeySkillsData";
 
-export default function SkillSelect(props) {
+export default function KeySkillsSelect(props) {
     const [skill, setSkill] = React.useState('Languages');
 
     const handleChange = (event) => {
